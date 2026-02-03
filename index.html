@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forecastly | Weather Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1 class="title">Forecastly</h1>
+    <p class="subtitle">Check real-time weather by city</p>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name (e.g. London)"
+      />
+      <button id="searchBtn">🔍</button>
+    </div>
+
+    <p id="loading" class="hidden">Fetching weather...</p>
+    <p id="error" class="error hidden"></p>
+
+    <section id="weatherContent" class="hidden">
+      <div class="card">
+        <h2 id="cityName"></h2>
+        <p id="currentDate"></p>
+
+        <div class="main-weather">
+          <div class="temp">
+            <span id="currentTemp"></span>°C
+          </div>
+
+          <div class="icon">
+            <img id="weatherIcon" alt="Weather Icon" />
+            <p id="weatherDesc"></p>
+          </div>
+        </div>
+
+        <div class="details">
+          <span>Feels like: <strong id="feelsLike"></strong></span>
+          <span>Humidity: <strong id="humidity"></strong></span>
+          <span>Wind: <strong id="wind"></strong></span>
+        </div>
+      </div>
+
+      <h3 class="forecast-title">Next Hours</h3>
+      <div id="forecastList"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

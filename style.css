@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  text-align: center;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 12px 0 0 12px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 12px 12px 0;
+  border: none;
+  background: #4f7cff;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.main-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.icon img {
+  width: 70px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.forecast-title {
+  color: #cccccc;
+  margin-bottom: 0.5rem;
+}
+
+#forecastList div {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.2);
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .main-weather {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+
+  .temp {
+    font-size: 2.5rem;
+  }
+}
